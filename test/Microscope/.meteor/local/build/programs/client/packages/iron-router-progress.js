@@ -103,9 +103,11 @@ IronRouterProgress = (function() {
     }
     if (this.isReady) {
       this.reset();
-      this.progress();
-      if (this.currentOptions.tick) {
-        this.tick();
+      if (this.currentOptions.enabled) {
+        this.progress();
+        if (this.currentOptions.tick) {
+          this.tick();
+        }
       }
     }
     return this;
@@ -151,6 +153,7 @@ IronRouterProgress.configure({
   element: "<div id=\"iron-router-progress\"></div>",
   spinner: true,
   tick: true,
+  enabled: true,
   reset: function() {
     this.element.removeClass('loading done');
     this.element.css('width', '0%');
@@ -219,4 +222,4 @@ Package['iron-router-progress'] = {
 
 })();
 
-//# sourceMappingURL=3b35fcdc128c8e969e7d8cade5171e6babb4de93.map
+//# sourceMappingURL=f56d6e7c6ece793f04f45013a6324e98b3c06242.map

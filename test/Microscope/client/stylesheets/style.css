@@ -224,3 +224,57 @@ h2{
 	color:#333;
 }
 
+
+/*---new styles---*/
+.logo{
+    display: block;
+    float: left;
+    height: 81px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 205px;
+    background: url("../../images/logo.png") no-repeat scroll 0 0;
+}
+
+.container{
+  margin-top:20px;
+}
+
+.navbar .nav .dropdown-toggle .caret {
+    margin-top: 27px;
+}
+
+.navbar .navbar-inner {
+    border-radius: 6px 6px 0 0;
+    border:1px solid #1995dc;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.nav li{
+  line-height:4.8em;
+}
+    
+.navbar-inner{
+  background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
+  color:#ffffff;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background-color: #178ACC;
+    box-shadow: none;
+  color:#ffffff;
+}
+
+.navbar .nav > li > a {
+    color: #ffffff;
+    text-shadow:none;
+  font-size:14px;
+  padding:10px 20px;
+}
+
+.navbar .nav .dropdown-toggle .caret {
+    margin-top: 27px;
+}
