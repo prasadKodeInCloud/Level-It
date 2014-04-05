@@ -55,6 +55,10 @@ Router.map(function() {
     controller: NewPostsListController
   });
   
+    this.route('projects', {
+    path: '/application/projects'
+  });
+  
   this.route('bestPosts', {
     path: '/best/:postsLimit?',
     controller: BestPostsListController

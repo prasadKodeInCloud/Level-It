@@ -23,19 +23,19 @@ Template.__define__("header", (function() {
     href: function() {
       return Spacebars.mustache(self.lookup("pathFor"), "newPosts");
     }
-  }, "New"), "\n          "), "\n          ", HTML.LI({
-    "class": function() {
-      return Spacebars.mustache(self.lookup("activeRouteClass"), "bestPosts");
-    }
-  }, "\n            ", HTML.A({
-    href: function() {
-      return Spacebars.mustache(self.lookup("pathFor"), "bestPosts");
-    }
-  }, "Best"), "\n          "), "\n          ", UI.If(function() {
+  }, "Home"), "\n          "), "\n          ", UI.If(function() {
     return Spacebars.call(self.lookup("currentUser"));
   }, UI.block(function() {
     var self = this;
     return [ "\n            ", HTML.LI({
+      "class": function() {
+        return Spacebars.mustache(self.lookup("activeRouteClass"), "projects");
+      }
+    }, "\n               ", HTML.A({
+      href: function() {
+        return Spacebars.mustache(self.lookup("pathFor"), "projects");
+      }
+    }, "Projects"), "\n            "), "\n            ", HTML.LI({
       "class": function() {
         return Spacebars.mustache(self.lookup("activeRouteClass"), "postSubmit");
       }
@@ -43,9 +43,9 @@ Template.__define__("header", (function() {
       href: function() {
         return Spacebars.mustache(self.lookup("pathFor"), "postSubmit");
       }
-    }, "Submit Post"), "\n            "), "\n            ", HTML.LI({
+    }, "Create Project"), "\n            "), "\n            ", HTML.LI({
       "class": "dropdown"
-    }, "\n              ", Spacebars.include(self.lookupTemplate("notifications")), "\n            "), "\n          " ];
+    }, "\n                    ", Spacebars.include(self.lookupTemplate("notifications")), "\n            "), "\n          " ];
   })), "\n        "), "\n        ", HTML.UL({
     "class": "nav pull-right"
   }, "\n          ", HTML.LI(Spacebars.include(self.lookupTemplate("loginButtons"))), "\n        "), "\n      "), "\n    "), "\n  ");

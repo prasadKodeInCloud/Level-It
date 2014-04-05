@@ -18,7 +18,7 @@ Template.__define__("postsList", (function() {
       href: function() {
         return Spacebars.mustache(self.lookup("nextPath"));
       }
-    }, "Load more"), "\n    " ];
+    }, "More Projects"), "\n    " ];
   })), "\n  ");
 }));
 
