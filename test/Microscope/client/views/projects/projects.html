@@ -1,0 +1,74 @@
+<template name="projectsList">
+	{{#each listAllProjects}}
+		
+		<div class="posts">		    
+		      	<div class="post" style="top: 0px;">
+			       <div class="post-content">
+			      <h3><a href="/projects/{{ _id }}">{{ name }}</a></h3>
+			      <p>
+			      	{{ desc }}
+			      </p>
+			      </div>
+			      <a href="/projects/{{ _id }}" class="discuss btn">Preview</a>
+		    	</div>
+		 	
+		</div>
+    
+	
+	{{/each}}
+</template>
+
+<template name="projectsNew">
+	<form class="main">
+	    	<div class="control-group">
+			<label class="control-label" for="title">Project Title</label>
+			<div class="controls">
+			    <input name="name" type="text" value="" placeholder="Name your post"/>
+			</div>
+
+		    <div class="control-group">
+			<label class="control-label" for="message">Project Description</label>
+			<div class="controls">
+			    <textarea name="desc" type="text" value=""></textarea>
+			</div>
+		    </div> 
+
+		    <div class="control-group">
+			<div class="controls">
+			    <input type="submit" value="Submit" class="btn btn-primary"/>
+			</div>
+		    </div>
+		</div>  
+	  </form>
+</template>
+
+<template name="projectView">
+	{{#each getProjectDetails}}
+		<div class="posts">		    
+		      	<div class="post" style="top: 0px;">
+			       <div class="post-content">
+			      <h2>{{ name }}</h2>
+			      <p>
+			      	{{ desc }}
+			      </p>
+			      </div>
+			      
+		    	</div>
+			
+			<ul class="comments">
+			    {{#each comments}}
+			      {{> comment}}
+			    {{/each}}
+			  </ul>
+			  
+			  {{#if currentUser}}
+			    {{> commentSubmit}}
+			  {{else}}
+			    <p>Please log in to leave a comment.</p>
+		 	{{/if}}
+	 	 	
+		</div>		
+		
+		
+	{{/each}}
+</template>

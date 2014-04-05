@@ -8,11 +8,19 @@ Meteor.publish('singlePost', function(id) {
 
 
 Meteor.publish('comments', function(postId) {
-  return Comments.find({postId: postId});
+  return Comments.find();
 });
 
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId});
+});
+
+Meteor.publish('projects', function() {
+  return Projects.find();
+});
+
+Meteor.publish('levels', function() {
+  return Levels.find();
 });
 
 })();

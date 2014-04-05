@@ -1,12 +1,111 @@
  <template name="projects"> 
+ <div class="modal fade" id="modal_addLevel">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 class="modal-title">Add Level</h4>
+	      </div>
+	      <div class="modal-body">
+			<form class="main" id="frm_addLevel">
+
+			    <div class="control-group">
+				<label class="control-label" for="title">Level Title</label>
+				<div class="controls">
+				    <input name="name" type="text" value="" placeholder="Name your level"/>
+				</div>
+			    </div>
+
+			    <div class="control-group">
+				<label class="control-label" for="width">Width</label>
+				<div class="controls">
+				    <input name="width" type="number" value="800" />
+				</div>
+			    </div> 
+			    
+			    <div class="control-group">
+				<label class="control-label" for="height">Height</label>
+				<div class="controls">
+				    <input name="height" type="number" value="480" />
+				</div>
+			    </div> 
+			    <div class="control-group">
+				<div class="controls">
+				    <input type="submit" value="Submit" class="btn btn-primary"/>
+				</div>
+			    </div>
+			</form>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	
     <div id='content' class='row-fluid'>
-  	<div class='span3 sidebar'>
-    	<h2>Sidebar</h2>
+  	<div class='span2 sidebar'>
+	
+	<div class="tree well" id="projectExplorer">
+	{{#each getAllProjects}}
+		
+			<li>
+			    <span data-id="{{ _id }}"><i class="icon-folder-close"></i> {{ name }}</span>
+			   
+			   <ul>
+			   {{#each levels}}
+			   	<li>
+					<span data-id="{{ _id }}"><i class="icon-minus-sign"></i> {{ name }}</span> 
+				 </li>
+			    {{/each}}
+			   </ul>	
+			   <!--
+			    <ul>
+				<li style="display:none">
+					<span><i class="icon-minus-sign"></i> Child</span> 
+				 </li>
+				<li style="display:none">
+					<span><i class="icon-minus-sign"></i> Child</span> 
+				    
+				</li>
+			    </ul>
+			    -->
+			    
+			</li>
+		
+	{{/each}} 
+	
+		
+	</div>
+	<div class="contextMenu" id="customMenu_projectExplorer" style="display:none">
+	      <ul>
+			<li id="addLevel">Add Level</li>
+	      </ul>
+	</div>
+	
+	
+	<div id="toolbar" class="panel toolbar-panel" >
+		<h4>Toolbox</h4>
+		<div class="component" id = "rectangle_1" draggable="true" >col-01</div>
+		<div class="component" id = "rectangle_2" draggable="true" >col-02</div>
+		<div class="component" id = "rectangle_3" draggable="true" >col-03</div>
+		<div class="component" id = "rectangle_4" draggable="true" >col-04</div>
+		<div class="component" id = "rectangle_5" draggable="true" >col-05</div>
+		<div class="component" id = "rectangle_6" draggable="true" >col-06</div>
+		<div class="component" id = "rectangle_7" draggable="true" >col-07</div>
+		<div class="component" id = "rectangle_8" draggable="true" >col-08</div>
+		<div class="component" id = "rectangle_9" draggable="true" >col-09</div>
+		<div class="component" id = "rectangle_10" draggable="true" >col-10</div>
+		<div class="component" id = "rectangle_11" draggable="true" >col-11</div>
+		<div class="component" id = "rectangle_12" draggable="true" >col-12</div>
+    	</div> 
+
+    	
+    	
+    	
   	</div>
-   <div style="height:100%" class='span9 main'>
+   <div style="height:100%" class='span8 main'>
      	<div style="width:100%;height:100%,float:left">
    <div style="width:20%;height:100%,float:right"></div>
-  <div style="width:80%;height:100%,float:left"><ul id="myTab" class="nav nav-tabs">
+  <div style="width:100%;height:100%,float:left"><ul id="myTab" class="nav nav-tabs">
   <li class="active"><a href="#Design" data-toggle="tab">Design</a></li>
   <li class=""><a href="#code" data-toggle="tab">Code</a></li>
   <li class=""><a href="#Preview"  data-toggle="tab">Preview</a></li>
@@ -14,16 +113,37 @@
  
 <div  id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="Design">
-	<p>igan american apparel, butcher voluptate nisi qui.</p>
+	
+	<div id="stage" class="stage"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	
+	
+	<div class="contextMenu" id="myMenu1">
+	      <ul>
+			<li id="delete">Delete</li>
+	      </ul>
+	</div>
+	
+	
   </div>
   <div class="tab-pane fade" id="code">
-	<!--<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>-->
- 	<iframe width=100% HEIGHT=100% src="http://gridit.meteor.com/"></iframe>
+	
+	
+	
+	
+	
   </div>
   <div class="tab-pane fade" id="Preview">
 	</div>
 	</div></div></div>
   </div>
+ 	 
+ 	 <div class='span2 sidebar'>
+ 	 	<div id="panel" class="panel properties-panel">
+			<h4>Properties</h4>	
+			 <button id="infoButton" style="margin: 10px 10px 10px 30px; padding: 10px;">Div info</button>
+			 <button id="gridsterBootstripyButton" style="margin: 10px 10px 10px 30px; padding: 10px;">Gridster-Boostrify</button>
+	    	</div>
+ 	 </div>
  	 
    </div>   
 

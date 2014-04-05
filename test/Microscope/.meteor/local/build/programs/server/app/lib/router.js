@@ -45,9 +45,17 @@ BestPostsListController = PostsListController.extend({
 });
 
 Router.map(function() {
-  this.route('home', {
-    path: '/',
-    controller: NewPostsListController
+  this.route('projectsList', {
+    path: '/'
+  });
+  this.route('projectsNew', {
+    path: '/projectsNew'
+  });
+  this.route('projectView', {
+    path: '/projects/:pid',
+    data: function(){
+    	return {pid: this.params.pid};
+    }
   });
   
   this.route('newPosts', {
@@ -55,9 +63,10 @@ Router.map(function() {
     controller: NewPostsListController
   });
   
-    this.route('projects', {
+  this.route('projects', {
     path: '/application/projects'
   });
+  
   
   this.route('bestPosts', {
     path: '/best/:postsLimit?',

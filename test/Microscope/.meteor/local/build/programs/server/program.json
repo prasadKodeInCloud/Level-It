@@ -1,6 +1,6 @@
 {
   "format": "javascript-image-pre1",
-  "arch": "os.linux.x86_64",
+  "arch": "os.linux.x86_32",
   "load": [
     {
       "path": "packages/underscore.js",
@@ -231,10 +231,16 @@
       "path": "app/collections/comments.js"
     },
     {
+      "path": "app/collections/levels.js"
+    },
+    {
       "path": "app/collections/notifications.js"
     },
     {
       "path": "app/collections/posts.js"
+    },
+    {
+      "path": "app/collections/projects.js"
     },
     {
       "path": "app/server/fixtures.js"

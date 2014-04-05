@@ -13,7 +13,7 @@
 
 //Projects
 //========
-{_id:"autoid", name:"name", userID:"userID"}
+{_id:"autoid",name:"name", userID:"userID"}
 
 //Levels
 //======
