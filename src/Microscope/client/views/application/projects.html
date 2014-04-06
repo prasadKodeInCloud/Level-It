@@ -1,4 +1,6 @@
  <template name="projects"> 
+ 
+ <!-- modal for adding new level started here -->
  <div class="modal hide fade" id="modal_addLevel">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
@@ -39,9 +41,54 @@
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+<!-- modal for new level goes here -->
+
+<!-- modal for adding new entity started here -->
+ <div class="modal hide fade" id="modal_addLevel">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 class="modal-title">Add Level</h4>
+	      </div>
+	      <div class="modal-body">
+			<form class="main" id="frm_addLevel">
+
+			    <div class="control-group">
+				<label class="control-label" for="title">Level Title</label>
+				<div class="controls">
+				    <input name="name" type="text" value="" placeholder="Name your level"/>
+				</div>
+			    </div>
+
+			    <div class="control-group">
+				<label class="control-label" for="width">Width</label>
+				<div class="controls">
+				    <input name="width" type="number" value="800" />
+				</div>
+			    </div> 
+			    
+			    <div class="control-group">
+				<label class="control-label" for="height">Height</label>
+				<div class="controls">
+				    <input name="height" type="number" value="480" />
+				</div>
+			    </div> 
+			    <div class="control-group">
+				<div class="controls">
+				    <input type="submit" value="Submit" class="btn btn-primary"/>
+				</div>
+			    </div>
+			</form>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+<!-- modal for new entity goes here -->
+
+
 	
-	
-    <div id='content' class='row-fluid'>
+    <div id='content' class='row-fluid canvas-top'>
   	<div class='span2 sidebar'>
 	
 	<div class="tree well" id="projectExplorer">
@@ -84,32 +131,39 @@
 	
 	<div id="toolbar" class="panel toolbar-panel" >
 		<h4>Toolbox</h4>
-		<div class="component" id = "rectangle_1" draggable="true" >col-01</div>
-		<div class="component" id = "rectangle_2" draggable="true" >col-02</div>
-		<div class="component" id = "rectangle_3" draggable="true" >col-03</div>
-		<div class="component" id = "rectangle_4" draggable="true" >col-04</div>
-		<div class="component" id = "rectangle_5" draggable="true" >col-05</div>
-		<div class="component" id = "rectangle_6" draggable="true" >col-06</div>
-		<div class="component" id = "rectangle_7" draggable="true" >col-07</div>
-		<div class="component" id = "rectangle_8" draggable="true" >col-08</div>
-		<div class="component" id = "rectangle_9" draggable="true" >col-09</div>
-		<div class="component" id = "rectangle_10" draggable="true" >col-10</div>
-		<div class="component" id = "rectangle_11" draggable="true" >col-11</div>
-		<div class="component" id = "rectangle_12" draggable="true" >col-12</div>
+		
+		<h5>Entities</h5>
+		
+		{{#each getCommonEntityTypes}}
+			<div class="component" id = "{{_id}}" draggable="true" >{{name}}</div>
+		{{/each}}
+		
+		<div align="center">
+			<a href="#" class="btn btn-success">New</a>
+		</div>
+		
+		<h5>Guide</h5>
+		<div class="component" id = "GUIDE_X" draggable="true" >guide-x</div>
+		<div class="component" id = "GUIDE_Y" draggable="true" >guide-y</div>
+		
     	</div> 
 
     	
     	
     	
   	</div>
-   <div style="height:100%" class='span8 main'>
+   <div style="height:100%;" class='span8 main canvas'>
+   
      	<div style="width:100%;height:100%,float:left">
-   <div style="width:20%;height:100%,float:right"></div>
-  <div style="width:100%;height:100%,float:left"><ul id="myTab" class="nav nav-tabs">
-  <li class="active"><a href="#Design" data-toggle="tab">Design</a></li>
-  <li class=""><a href="#code" data-toggle="tab">Code</a></li>
-  <li class=""><a href="#Preview"  data-toggle="tab">Preview</a></li>
-</ul>
+     	
+   		<div style="width:20%;height:100%,float:right"></div>
+   		
+  			<div style="width:100%;height:100%,float:left;display:none"  id="canvas_content">
+  				<ul id="myTab" class="nav nav-tabs">
+				  <li class="active"><a href="#Design" data-toggle="tab">Design</a></li>
+				  <li class=""><a href="#code" data-toggle="tab" id="btn_tabCode">Code</a></li>
+				  <li class=""><a href="#Preview"  data-toggle="tab">Preview</a></li>
+				</ul>
  
 <div  id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="Design">
@@ -128,16 +182,7 @@
   <div class="tab-pane fade" id="code">
 	
 	<textarea id="codeIDE" name="codeIDE">
-	&lt;html style="color: green"&gt;
-	  &lt;!-- this is a comment --&gt;
-	  &lt;head&gt;
-	    &lt;title&gt;HTML Example&lt;/title&gt;
-	  &lt;/head&gt;
-	  &lt;body&gt;
-	    The indentation tries to be &lt;em&gt;somewhat &amp;quot;do what
-	    I mean&amp;quot;&lt;/em&gt;... but might not match your style.
-	  &lt;/body&gt;
-	&lt;/html&gt;
+	
 	</textarea>
 	
 	
@@ -152,8 +197,19 @@
  	 <div class='span2 sidebar'>
  	 	<div id="panel" class="panel properties-panel">
 			<h4>Properties</h4>	
-			 <button id="infoButton" style="margin: 10px 10px 10px 30px; padding: 10px;">Div info</button>
-			 <button id="gridsterBootstripyButton" style="margin: 10px 10px 10px 30px; padding: 10px;">Gridster-Boostrify</button>
+			 
+			 <div class="well">
+			 	<button id="infoButton" class="btn btn-primary">Div info</button>
+			 	<a href="#" id="btn_downloadXml" class="btn btn-primary">Get XML</a>
+		 	 </div>
+		 <!--
+		 <button id="xmlBtn" style="margin: 10px 10px 10px 30px; padding: 10px;">Get XML</button>
+		 -->
+		 
+		 
+		 
+		 <input id= "checkBoxShowGuideLines" checked="checked" type="checkbox" style="margin: 10px 10px 10px 30px; padding: 10px;"> Show Guide Lines
+			 
 	    	</div>
  	 </div>
  	 

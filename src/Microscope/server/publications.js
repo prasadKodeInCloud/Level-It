@@ -22,3 +22,11 @@ Meteor.publish('projects', function() {
 Meteor.publish('levels', function() {
   return Levels.find();
 });
+
+Meteor.publish('entities', function() {
+  return Entities.find();
+});
+
+Meteor.publish('etypes', function() {
+  return ETypes.find();
+});

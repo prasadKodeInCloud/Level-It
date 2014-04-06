@@ -1,3 +1,22 @@
+//Adddin the Entity Types
+if (ETypes.find().count() === 0) {
+	ETypes.insert({ _id:"RECTANGLE", name:"rectangle", type:"RECTANGLE", isResizable:false, imageUrl:"", styles:{fill:'#E9F1FA', stroke:'#DBE2F0',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:1}});
+	
+	ETypes.insert({ _id:"RESIZABLE_RECTANGLE", name:"resizable rectangle", type:"RECTANGLE", isResizable:true, imageUrl:"", styles:{fill:'#E9F1FA', stroke:'#DBE2F0',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:1}});
+	
+	/*
+	ETypes.insert({ _id:"CIRCLE", isResizable:false,  name:"circle", type:"CIRCLE", imageUrl:"", styles:{fill:'#E9F1FA', stroke:'#DBE2F0',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:1}});
+		
+	ETypes.insert({ _id:"RESIZABLE_CIRCLE", isResizable:true, name:"resizable circle", type:"CIRCLE", imageUrl:"", styles:{fill:'#E9F1FA', stroke:'#DBE2F0',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:1}});	
+	*/
+	
+	ETypes.insert({_id:"LANTERN",type:"RECTANGLE", name:"lantern", isResizable:false, imageUrl:"../url", styles:{fill:'#D1E8FF', stroke:'#73ABFF',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:2}});
+	
+	ETypes.insert({_id:"BRICK",type:"RECTANGLE", name:"brick", isResizable:false, imageUrl:"../url", styles:{fill:'#FFE0D1', stroke:'#FF9966',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:3, yCells:1}});
+	
+	ETypes.insert({_id:"CHINESE_LANTERN",type:"RECTANGLE", name:"chinese lantern", isResizable:true, imageUrl:"../url", styles:{fill:'#FFCCFF', stroke:'#FF66FF',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:2}});
+}
+
 // Fixture data 
 if (Posts.find().count() === 0) {
   var now = new Date().getTime();
