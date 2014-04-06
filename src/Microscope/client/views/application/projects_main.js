@@ -294,6 +294,11 @@ Template.projects.rendered = function(){
   		
   		$('input[type="text"]',e.target).val('');
 	});
+	
+	var editorIDE = CodeMirror.fromTextArea(document.getElementById("codeIDE"), {
+		mode: "text/html",
+		lineNumbers: true
+	      });
 	 
 	 /** end of code **/
 	
