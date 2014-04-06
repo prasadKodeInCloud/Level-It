@@ -189,6 +189,11 @@
       "sourceMapRoot": "packages"
     },
     {
+      "path": "packages/kinetic.js.js",
+      "sourceMap": "packages/kinetic.js.js.map",
+      "sourceMapRoot": "packages"
+    },
+    {
       "path": "packages/session.js",
       "sourceMap": "packages/session.js.map",
       "sourceMapRoot": "packages"

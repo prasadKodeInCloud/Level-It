@@ -436,11 +436,22 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/packages/iron-router-progress.js?3b35fcdc128c8e969e7d8cade5171e6babb4de93",
+      "url": "/packages/iron-router-progress.js?f56d6e7c6ece793f04f45013a6324e98b3c06242",
       "sourceMap": "packages/iron-router-progress.js.map",
-      "sourceMapUrl": "/packages/3b35fcdc128c8e969e7d8cade5171e6babb4de93.map",
-      "size": 6780,
-      "hash": "2be85670090395ad78a024d8c35c68d79bd4c953"
+      "sourceMapUrl": "/packages/f56d6e7c6ece793f04f45013a6324e98b3c06242.map",
+      "size": 6854,
+      "hash": "d4cf3817c358c3a34be16f0b384e0919e2ecf070"
+    },
+    {
+      "path": "packages/kinetic.js.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/kinetic.js.js?04175c09033075964a4aefcea2350cf2f3cb8bc5",
+      "sourceMap": "packages/kinetic.js.js.map",
+      "sourceMapUrl": "/packages/04175c09033075964a4aefcea2350cf2f3cb8bc5.map",
+      "size": 1770034,
+      "hash": "b06e29b8380fc72f5940f279821c3c4e755097a7"
     },
     {
       "path": "packages/webapp.js",
@@ -469,9 +480,9 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/packages/global-imports.js?add909a70d18d2cb6426331c26415c836a3ffed9",
-      "size": 884,
-      "hash": "add909a70d18d2cb6426331c26415c836a3ffed9"
+      "url": "/packages/global-imports.js?b4f1d2cf136df1ae31c65d45a05a246c0508bc88",
+      "size": 925,
+      "hash": "b4f1d2cf136df1ae31c65d45a05a246c0508bc88"
     },
     {
       "path": "app/client/views/application/template.layout.js",
@@ -532,9 +543,15 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
+<<<<<<< HEAD
       "url": "/client/views/includes/template.header.js?0453bb02c9a97bbbdc7a031f2878793b4e0bb9b0",
       "size": 2218,
       "hash": "0453bb02c9a97bbbdc7a031f2878793b4e0bb9b0"
+=======
+      "url": "/client/views/includes/template.header.js?013b7ba6177eabade2b02d4bb3b32fb6b172c807",
+      "size": 2210,
+      "hash": "013b7ba6177eabade2b02d4bb3b32fb6b172c807"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
     },
     {
       "path": "app/client/views/includes/template.loading.js",
@@ -917,6 +934,7 @@
       "hash": "4d93a2f8c666a85dc15b8cf428df3dcdff3d69e6"
     },
     {
+<<<<<<< HEAD
       "path": "6f7bef050795692dbcae1bc8301a5159c0dcda90.css",
       "where": "client",
       "type": "css",
@@ -926,6 +944,17 @@
       "sourceMapUrl": "/6f7bef050795692dbcae1bc8301a5159c0dcda90.map",
       "size": 164022,
       "hash": "bf9a2c7fd1f4739def8d85e7cf64e026cb5b4c92"
+=======
+      "path": "54979077f191913999cbc7cce6533a034e19d960.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/54979077f191913999cbc7cce6533a034e19d960.css",
+      "sourceMap": "54979077f191913999cbc7cce6533a034e19d960.css.map",
+      "sourceMapUrl": "/54979077f191913999cbc7cce6533a034e19d960.map",
+      "size": 162447,
+      "hash": "5c82ec8444b9289cffcafabeaca55f16afbc4f0e"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
     },
     {
       "path": "packages/bootstrap/img/glyphicons-halflings.png",
@@ -946,6 +975,7 @@
       "hash": "a25c4705320fd63c33790e666872910e702b9bf6"
     },
     {
+<<<<<<< HEAD
       "path": "app/compatibility/rbox.js",
       "where": "client",
       "type": "asset",
@@ -1025,11 +1055,24 @@
       "url": "/compatibility/lib/zcontextmenu.js",
       "size": 2565,
       "hash": "6975ed418bded4417c5ab2a972df3754e0cc04c8"
+=======
+      "path": "app/images/logo.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logo.png",
+      "size": 3462,
+      "hash": "b49d23c5ab721cdbb6724fa7b49ad825f71205c0"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
     },
     {
       "path": "app.html",
       "where": "internal",
+<<<<<<< HEAD
       "hash": "bdb4723525001bddf2a3e2d15949289d25d90981"
+=======
+      "hash": "3101121ffa8765eb555a469dc1fdb4567ce96e92"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
     }
   ]
 }

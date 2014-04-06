@@ -7,11 +7,11 @@ Template.__define__("header", (function() {
   }, "\n    ", HTML.DIV({
     "class": "navbar-inner"
   }, HTML.Raw('\n      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">\n        <span class="icon-bar"></span>\n        <span class="icon-bar"></span>\n        <span class="icon-bar"></span>\n      </a>\n      '), HTML.A({
-    "class": "brand",
+    "class": "logo",
     href: function() {
       return Spacebars.mustache(self.lookup("pathFor"), "home");
     }
-  }, "Microscope"), "\n      ", HTML.DIV({
+  }, "Maplr"), "\n      ", HTML.DIV({
     "class": "nav-collapse collapse"
   }, "\n        ", HTML.UL({
     "class": "nav"

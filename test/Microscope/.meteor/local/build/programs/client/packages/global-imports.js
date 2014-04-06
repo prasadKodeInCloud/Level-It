@@ -5,6 +5,7 @@ Route = Package['iron-router'].Route;
 Router = Package['iron-router'].Router;
 IronLocation = Package['iron-router'].IronLocation;
 IronRouterProgress = Package['iron-router-progress'].IronRouterProgress;
+Kinetic = Package['kinetic.js'].Kinetic;
 Meteor = Package.meteor.Meteor;
 WebApp = Package.webapp.WebApp;
 Log = Package.logging.Log;
