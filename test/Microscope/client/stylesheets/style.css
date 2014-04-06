@@ -58,7 +58,10 @@ body {
       font-size: 18px; }
       .post .post-content h3 a {
         display: inline-block;
-        margin-right: 5px; }
+        margin-right: 5px;
+        color: #2C3E50;
+        font-size:16px;
+  padding-top:5px;}
       .post .post-content h3 span {
         font-weight: normal;
         font-size: 14px;
@@ -277,4 +280,55 @@ h2{
 
 .navbar .nav .dropdown-toggle .caret {
     margin-top: 27px;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
+  box-shadow:none;
+  background-color: #178ACC;
+}
+
+
+.post .post-content h3 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.post{
+      border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+      background: url("../../images/logo.png") no-repeat scroll 0 0 #F5F8F8;
+  border:1px solid #D9D9D9;
+}
+
+.create-projects {
+    background: none repeat scroll 0 0 #F5F8F8;
+    float: left;
+    padding: 44px 92px 0 60px;
+    width: 87%;
+}
+
+
+.create-projects .control-group {
+    margin: 0 auto;
+    padding: 10px 30px;
+    width: 42%;
+}
+
+.create-projects label{
+      padding: 15px 0;
+}
+
+.create-projects input{
+    padding: 15px;
+    width: 85%;
+}
+
+.create-projects textarea{
+    min-height: 120px;
+    width: 89%;
+}
+
+input.btn[type="submit"] {
+    width: 42%;
+    margin-left: 26%;
 }

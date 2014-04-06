@@ -597,9 +597,9 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/client/views/posts/template.post_submit.js?6ae0ea24c87d52c1ffce57365a81e6bc3f603527",
-      "size": 931,
-      "hash": "6ae0ea24c87d52c1ffce57365a81e6bc3f603527"
+      "url": "/client/views/posts/template.post_submit.js?0fd4d1f08c7f99f289cdaf94cfd567e37d35a8c6",
+      "size": 947,
+      "hash": "0fd4d1f08c7f99f289cdaf94cfd567e37d35a8c6"
     },
     {
       "path": "app/client/views/posts/template.posts_list.js",
@@ -793,15 +793,15 @@
       "hash": "4d93a2f8c666a85dc15b8cf428df3dcdff3d69e6"
     },
     {
-      "path": "54979077f191913999cbc7cce6533a034e19d960.css",
+      "path": "f00f7b51648e652d67b3cda5f75f28649f8b59d4.css",
       "where": "client",
       "type": "css",
       "cacheable": true,
-      "url": "/54979077f191913999cbc7cce6533a034e19d960.css",
-      "sourceMap": "54979077f191913999cbc7cce6533a034e19d960.css.map",
-      "sourceMapUrl": "/54979077f191913999cbc7cce6533a034e19d960.map",
-      "size": 162447,
-      "hash": "5c82ec8444b9289cffcafabeaca55f16afbc4f0e"
+      "url": "/f00f7b51648e652d67b3cda5f75f28649f8b59d4.css",
+      "sourceMap": "f00f7b51648e652d67b3cda5f75f28649f8b59d4.css.map",
+      "sourceMapUrl": "/f00f7b51648e652d67b3cda5f75f28649f8b59d4.map",
+      "size": 163367,
+      "hash": "c6dfa704e77c334d6eb24479c4509d8abaa8a468"
     },
     {
       "path": "packages/bootstrap/img/glyphicons-halflings.png",
@@ -822,6 +822,15 @@
       "hash": "a25c4705320fd63c33790e666872910e702b9bf6"
     },
     {
+      "path": "app/images/arrow.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/arrow.png",
+      "size": 1363,
+      "hash": "194ade96ce4e8ad0c514d96e0ac03aa5fbe5ebdf"
+    },
+    {
       "path": "app/images/logo.png",
       "where": "client",
       "type": "asset",
@@ -833,7 +842,7 @@
     {
       "path": "app.html",
       "where": "internal",
-      "hash": "3101121ffa8765eb555a469dc1fdb4567ce96e92"
+      "hash": "4fadacfbdff2442e9b62fccfe0a78cf26ffef106"
     }
   ]
 }
