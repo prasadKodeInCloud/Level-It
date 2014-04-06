@@ -43,19 +43,19 @@
 	</div><!-- /.modal -->
 <!-- modal for new level goes here -->
 
-<!-- modal for adding new entity started here -->
+<!-- modal for adding new level started here -->
  <div class="modal hide fade" id="modal_addLevel">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		<h4 class="modal-title">Add Level</h4>
+		<h4 class="modal-title">Add Entity</h4>
 	      </div>
 	      <div class="modal-body">
 			<form class="main" id="frm_addLevel">
 
 			    <div class="control-group">
-				<label class="control-label" for="title">Level Title</label>
+				<label class="control-label" for="title">Entity Title</label>
 				<div class="controls">
 				    <input name="name" type="text" value="" placeholder="Name your level"/>
 				</div>
@@ -84,8 +84,7 @@
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
-<!-- modal for new entity goes here -->
-
+<!-- modal for new level goes here -->
 
 	
     <div id='content' class='row-fluid canvas-top'>
@@ -198,9 +197,11 @@
  	 	<div id="panel" class="panel properties-panel">
 			<h4>Properties</h4>	
 			 
-			 <div class="well">
-			 	<button id="infoButton" class="btn btn-primary">Div info</button>
+			 <div class="well" align="middle">
+			 	<button id="infoButton" class="btn btn-primary">Save</button>
 			 	<a href="#" id="btn_downloadXml" class="btn btn-primary">Get XML</a>
+			 	
+			 	<input id= "checkBoxShowGuideLines" checked="checked" type="checkbox" style="margin: 10px 10px 10px 30px; padding: 10px;"> Show Guide Lines
 		 	 </div>
 		 <!--
 		 <button id="xmlBtn" style="margin: 10px 10px 10px 30px; padding: 10px;">Get XML</button>
@@ -208,7 +209,7 @@
 		 
 		 
 		 
-		 <input id= "checkBoxShowGuideLines" checked="checked" type="checkbox" style="margin: 10px 10px 10px 30px; padding: 10px;"> Show Guide Lines
+		 
 			 
 	    	</div>
  	 </div>

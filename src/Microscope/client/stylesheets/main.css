@@ -46,7 +46,7 @@
 	  }
 	  .component{
 		background-color: #E7E7F7;
-		height:20px;
+		min-height:20px;
 		width:92px;
 		padding:5px;
 		margin:5px 8px;

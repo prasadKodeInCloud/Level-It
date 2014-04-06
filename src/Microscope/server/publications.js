@@ -30,3 +30,4 @@ Meteor.publish('entities', function() {
 Meteor.publish('etypes', function() {
   return ETypes.find();
 });
+

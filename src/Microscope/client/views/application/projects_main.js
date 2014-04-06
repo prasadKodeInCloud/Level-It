@@ -32,7 +32,7 @@ Template.projects.helpers({
 			returnObj[i] = {name:p.name, _id:p._id, levels:levels};
 		});
 		
-		console.log(returnObj);
+		//console.log(returnObj);
 		return returnObj;
 			 	
 	},
@@ -50,9 +50,7 @@ Template.projects.helpers({
 });
 
 Template.projects.events({
-	'contextmenu .tree > li span': function(e){
-		alert(e);
-	},
+
 		
 	
 });

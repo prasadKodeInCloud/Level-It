@@ -644,6 +644,7 @@ input.btn[type="submit"] {
     top: 167px !important;
     position: absolute;
     width: 140px;
+    z-index:150;
 }
 .project-wrapper .row-fluid .span2 {
     width: 10.53%;
