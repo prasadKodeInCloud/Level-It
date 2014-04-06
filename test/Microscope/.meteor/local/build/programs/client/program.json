@@ -544,6 +544,7 @@
       "type": "js",
       "cacheable": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "/client/views/includes/template.header.js?013b7ba6177eabade2b02d4bb3b32fb6b172c807",
       "size": 2210,
       "hash": "013b7ba6177eabade2b02d4bb3b32fb6b172c807"
@@ -551,6 +552,16 @@
       "url": "/client/views/includes/template.header.js?0453bb02c9a97bbbdc7a031f2878793b4e0bb9b0",
       "size": 2218,
       "hash": "0453bb02c9a97bbbdc7a031f2878793b4e0bb9b0"
+>>>>>>> master
+=======
+      "url": "/client/views/includes/template.header.js?0453bb02c9a97bbbdc7a031f2878793b4e0bb9b0",
+      "size": 2218,
+      "hash": "0453bb02c9a97bbbdc7a031f2878793b4e0bb9b0"
+=======
+      "url": "/client/views/includes/template.header.js?013b7ba6177eabade2b02d4bb3b32fb6b172c807",
+      "size": 2210,
+      "hash": "013b7ba6177eabade2b02d4bb3b32fb6b172c807"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
 >>>>>>> master
     },
     {
@@ -603,9 +614,9 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/client/views/posts/template.post_submit.js?6ae0ea24c87d52c1ffce57365a81e6bc3f603527",
-      "size": 931,
-      "hash": "6ae0ea24c87d52c1ffce57365a81e6bc3f603527"
+      "url": "/client/views/posts/template.post_submit.js?0fd4d1f08c7f99f289cdaf94cfd567e37d35a8c6",
+      "size": 947,
+      "hash": "0fd4d1f08c7f99f289cdaf94cfd567e37d35a8c6"
     },
     {
       "path": "app/client/views/posts/template.posts_list.js",
@@ -935,16 +946,21 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "path": "54979077f191913999cbc7cce6533a034e19d960.css",
+=======
+      "path": "f00f7b51648e652d67b3cda5f75f28649f8b59d4.css",
+>>>>>>> master
       "where": "client",
       "type": "css",
       "cacheable": true,
-      "url": "/54979077f191913999cbc7cce6533a034e19d960.css",
-      "sourceMap": "54979077f191913999cbc7cce6533a034e19d960.css.map",
-      "sourceMapUrl": "/54979077f191913999cbc7cce6533a034e19d960.map",
-      "size": 162447,
-      "hash": "5c82ec8444b9289cffcafabeaca55f16afbc4f0e"
+      "url": "/f00f7b51648e652d67b3cda5f75f28649f8b59d4.css",
+      "sourceMap": "f00f7b51648e652d67b3cda5f75f28649f8b59d4.css.map",
+      "sourceMapUrl": "/f00f7b51648e652d67b3cda5f75f28649f8b59d4.map",
+      "size": 163367,
+      "hash": "c6dfa704e77c334d6eb24479c4509d8abaa8a468"
 =======
+<<<<<<< HEAD
       "path": "6f7bef050795692dbcae1bc8301a5159c0dcda90.css",
       "where": "client",
       "type": "css",
@@ -954,6 +970,21 @@
       "sourceMapUrl": "/6f7bef050795692dbcae1bc8301a5159c0dcda90.map",
       "size": 164022,
       "hash": "bf9a2c7fd1f4739def8d85e7cf64e026cb5b4c92"
+<<<<<<< HEAD
+>>>>>>> master
+=======
+=======
+      "path": "54979077f191913999cbc7cce6533a034e19d960.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/54979077f191913999cbc7cce6533a034e19d960.css",
+      "sourceMap": "54979077f191913999cbc7cce6533a034e19d960.css.map",
+      "sourceMapUrl": "/54979077f191913999cbc7cce6533a034e19d960.map",
+      "size": 162447,
+      "hash": "5c82ec8444b9289cffcafabeaca55f16afbc4f0e"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
+>>>>>>> 89cf896024fca80bac41283a2f189f631e17d1b2
 >>>>>>> master
     },
     {
@@ -976,14 +1007,21 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "path": "app/images/logo.png",
+=======
+      "path": "app/images/arrow.png",
+>>>>>>> master
       "where": "client",
       "type": "asset",
       "cacheable": false,
-      "url": "/images/logo.png",
-      "size": 3462,
-      "hash": "b49d23c5ab721cdbb6724fa7b49ad825f71205c0"
+      "url": "/images/arrow.png",
+      "size": 1363,
+      "hash": "194ade96ce4e8ad0c514d96e0ac03aa5fbe5ebdf"
+    },
+    {
 =======
+<<<<<<< HEAD
       "path": "app/compatibility/rbox.js",
       "where": "client",
       "type": "asset",
@@ -1063,15 +1101,40 @@
       "url": "/compatibility/lib/zcontextmenu.js",
       "size": 2565,
       "hash": "6975ed418bded4417c5ab2a972df3754e0cc04c8"
+<<<<<<< HEAD
+>>>>>>> master
+=======
+=======
+>>>>>>> 89cf896024fca80bac41283a2f189f631e17d1b2
+      "path": "app/images/logo.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/images/logo.png",
+      "size": 3462,
+      "hash": "b49d23c5ab721cdbb6724fa7b49ad825f71205c0"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
 >>>>>>> master
     },
     {
       "path": "app.html",
       "where": "internal",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "hash": "3101121ffa8765eb555a469dc1fdb4567ce96e92"
 =======
+      "hash": "4fadacfbdff2442e9b62fccfe0a78cf26ffef106"
+>>>>>>> master
+=======
+<<<<<<< HEAD
       "hash": "bdb4723525001bddf2a3e2d15949289d25d90981"
+<<<<<<< HEAD
+>>>>>>> master
+=======
+=======
+      "hash": "3101121ffa8765eb555a469dc1fdb4567ce96e92"
+>>>>>>> cac35cea1904363d4c19dd55e4ce339b2d6c403a
+>>>>>>> 89cf896024fca80bac41283a2f189f631e17d1b2
 >>>>>>> master
     }
   ]
