@@ -17,11 +17,11 @@ Template.__define__("header", (function() {
     "class": "nav"
   }, "\n          ", HTML.LI({
     "class": function() {
-      return Spacebars.mustache(self.lookup("activeRouteClass"), "home", "newPosts");
+      return Spacebars.mustache(self.lookup("activeRouteClass"), "projectsList");
     }
   }, "\n            ", HTML.A({
     href: function() {
-      return Spacebars.mustache(self.lookup("pathFor"), "newPosts");
+      return Spacebars.mustache(self.lookup("pathFor"), "projectsList");
     }
   }, "Home"), "\n          "), "\n          ", UI.If(function() {
     return Spacebars.call(self.lookup("currentUser"));
@@ -37,11 +37,11 @@ Template.__define__("header", (function() {
       }
     }, "Projects"), "\n            "), "\n            ", HTML.LI({
       "class": function() {
-        return Spacebars.mustache(self.lookup("activeRouteClass"), "postSubmit");
+        return Spacebars.mustache(self.lookup("activeRouteClass"), "projectsNew");
       }
     }, "\n              ", HTML.A({
       href: function() {
-        return Spacebars.mustache(self.lookup("pathFor"), "postSubmit");
+        return Spacebars.mustache(self.lookup("pathFor"), "projectsNew");
       }
     }, "Create Project"), "\n            "), "\n            ", HTML.LI({
       "class": "dropdown"
