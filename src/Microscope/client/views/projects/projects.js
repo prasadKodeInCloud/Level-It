@@ -43,6 +43,10 @@ Template.projectView.helpers({
 	}
 });
 
-$('.carousel').carousel({
-  interval: 10
-});
+Template.projectView.rendered = function(){
+	$('.carousel').carousel({
+	  interval: 10
+	});	
+}
+
+
