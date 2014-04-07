@@ -42,3 +42,7 @@ Template.projectView.helpers({
 	    return Comments.find({postId: this._id});
 	}
 });
+
+$('.carousel').carousel({
+  interval: 10
+});

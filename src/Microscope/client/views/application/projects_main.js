@@ -303,7 +303,12 @@ Template.projects.rendered = function(){
 		  
 		  $("#btn_tabCode").click(function(){
 		  	editorIDE.setValue(getXml());	
-		  	editorIDE.focus(); 	
+		  	editorIDE.focus(); 
+		  	$("#toolbar").hide();	
+		  });
+		  $("#btn_tabDesign").click(function(){	
+		  	//alert('test');
+		  	$("#toolbar").show();	
 		  });
 		  
 		  $("#btn_downloadXml").click(function(){

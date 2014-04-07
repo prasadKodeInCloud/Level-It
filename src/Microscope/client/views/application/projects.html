@@ -138,7 +138,7 @@
 		{{/each}}
 		
 		<div align="center">
-			<a href="#" class="btn btn-success">New</a>
+			<a href="#" class="btn btn-success disabled">New</a>
 		</div>
 		
 		<h5>Guide</h5>
@@ -159,7 +159,7 @@
    		
   			<div style="width:100%;height:100%,float:left;display:none"  id="canvas_content">
   				<ul id="myTab" class="nav nav-tabs">
-				  <li class="active"><a href="#Design" data-toggle="tab">Design</a></li>
+				  <li class="active"><a href="#Design" data-toggle="tab" id="btn_tabDesign">Design</a></li>
 				  <li class=""><a href="#code" data-toggle="tab" id="btn_tabCode">Code</a></li>
 				  <li class=""><a href="#Preview"  data-toggle="tab">Preview</a></li>
 				</ul>
@@ -193,8 +193,8 @@
 	</div></div></div>
   </div>
  	 
- 	 <div class='span2 sidebar'>
- 	 	<div id="panel" class="panel properties-panel">
+ 	 <div class='span2 sidebar' style="margin-right: 8px;float: left;">
+ 	 	<div id="panel" class="panel properties-panel" >
 			<h4>Properties</h4>	
 			 
 			 <div class="well" align="middle">

@@ -644,10 +644,7 @@ input.btn[type="submit"] {
     top: 167px !important;
     position: absolute;
     width: 140px;
-<<<<<<< HEAD
     z-index:150;
-=======
->>>>>>> 2ce1e8001b3c779e3e12e75763efe89fa7bc858c
 }
 .project-wrapper .row-fluid .span2 {
     width: 10.53%;
