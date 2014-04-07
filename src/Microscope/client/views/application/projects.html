@@ -44,7 +44,7 @@
 <!-- modal for new level goes here -->
 
 <!-- modal for adding new level started here -->
- <div class="modal hide fade" id="modal_addLevel">
+ <div class="modal hide fade" id="modal_addEntity">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -99,21 +99,10 @@
 			   <ul>
 			   {{#each levels}}
 			   	<li>
-					<span data-id="{{ _id }}"><i class="icon-minus-sign"></i> {{ name }}</span> 
+					<span data-id="{{ _id }}" onclick="initLevel(this)"><i class="icon-minus-sign"></i> {{ name }}</span> 
 				 </li>
 			    {{/each}}
 			   </ul>	
-			   <!--
-			    <ul>
-				<li style="display:none">
-					<span><i class="icon-minus-sign"></i> Child</span> 
-				 </li>
-				<li style="display:none">
-					<span><i class="icon-minus-sign"></i> Child</span> 
-				    
-				</li>
-			    </ul>
-			    -->
 			    
 			</li>
 		
@@ -170,7 +159,7 @@
 	<div id="stage" class="stage"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 	
 	
-	<div class="contextMenu" id="myMenu1">
+	<div class="contextMenu" id="myMenu1" style="display:none">
 	      <ul>
 			<li id="delete">Delete</li>
 	      </ul>

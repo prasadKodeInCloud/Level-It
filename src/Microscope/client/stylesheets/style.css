@@ -684,6 +684,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f0f5', end
 
 .properties-panel {
     margin-top: 64px;
+    margin-left:-20px;
     right: 0;
     top: 0;
     width: 135px;
@@ -695,7 +696,7 @@ body {
 }
 
 .stage {
-    margin: 20px auto 20px 115px !important;
+    margin: 20px auto 20px 108px !important;
 }
 
 .project-wrapper .post .post-content h3 a{
@@ -710,4 +711,17 @@ body {
 
 .project-wrapper .post .post-content{
   padding-left:20px;
+}
+
+.tree li.parent_li span{
+	cursor:pointer;
+}
+.tree li.parent_li li span{
+	cursor:pointer;
+}
+.tree li.parent_li li{
+	padding:1px 1px 1px 2px;
+}
+.tree li.parent_li li:hover, .tree li.parent_li li.active{
+	background-color:#b2c2b9;
 }
