@@ -92,6 +92,12 @@ Template.projects.rendered = function(){
         width: Global.STAGE_WIDTH ,
         height: Global.STAGE_HEIGHT 
 	});
+  
+  var stagePreview = new Kinetic.Stage({
+        container: 'stagePreview',
+        width: Global.STAGE_WIDTH ,
+        height: Global.STAGE_HEIGHT 
+	});
 		  
 	layer = new Kinetic.Layer();
 	
