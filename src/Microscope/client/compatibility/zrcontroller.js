@@ -326,9 +326,63 @@ function Editor(){
 		addComponent(layer,ItemPool.currentItem.getEntityType(),params);
 	}
 	
+	function addComponentFromDB(currentLayer,entityTypeID,params){
+		var item = null;
+		
+		/** Must be a Grid_X or Grid_Y
+		**/
+			
+		if(components[entityTypeID]){			
+				item = components[entityTypeID]({
+					styles:{
+						x:params.x,
+						y:params.y
+					}
+				});
+				GridPool.addItem(item.kn);
+				currentLayer.add(item.kn);
+				currentLayer.draw();
+
+		}
+			/** Must be a entity
+		**/
+			else if(entityTypes[entityTypeID]){
+			
+				item = components[entityTypes[entityTypeID].type]({
+					styles:{
+						x:params.x*Global.CELL_WIDTH,
+						y:params.y*Global.CELL_HEIGHT,
+						width:Global.CELL_WIDTH * params.width,
+						height:Global.CELL_HEIGHT * params.height,
+						opacity:0.7,
+						fill:entityTypes[entityTypeID].styles.fill,
+						stroke:entityTypes[entityTypeID].styles.stroke,
+						itemIndex:entityTypeID + itemCount,
+						entityTypeID:entityTypeID//,
+						//rotation: 30
+					},
+					ponterSides:{
+						top:entityTypes[entityTypeID].isResizable,
+						right:entityTypes[entityTypeID].isResizable,
+						bottom:entityTypes[entityTypeID].isResizable,
+						left:entityTypes[entityTypeID].isResizable,
+						scale:entityTypes[entityTypeID].isResizable
+					}
+				});
+			
+				currentLayer.add(item.kn);
+				currentLayer.draw();
+				//console.log(getDroppedContainer(item));
+				item.entityTypeID = entityTypeID;
+				itemCount++;
+				ItemPool.addItem(item);
+			
+			
+			}
+	}
 
 	function addComponent(currentLayer,entityTypeID,params){
-	
+		//console.log(entityTypeID);
 		var rowIndex = Math.floor(params.x/Global.CELL_WIDTH);
 		var columnIndex = Math.floor(params.y/Global.CELL_HEIGHT);
 		//console.log("rest x : " + params.x % Global.CELL_WIDTH);
@@ -344,9 +398,10 @@ function Editor(){
 		params.y = (columnIndex) * Global.CELL_HEIGHT;	
 		
 		var item = null;
+		
         /** Must be a Grid_X or Grid_Y
         **/
-        
+        	
         if(components[entityTypeID]){
         	
 			item = components[entityTypeID]({
@@ -363,7 +418,7 @@ function Editor(){
 		/** Must be a entity
         **/
 		else if(entityTypes[entityTypeID]){
-
+			
 			item = components[entityTypes[entityTypeID].type]({
 				styles:{
 					x:params.x,
@@ -389,6 +444,7 @@ function Editor(){
 			currentLayer.add(item.kn);
 			currentLayer.draw();
 			//console.log(getDroppedContainer(item));
+			item.entityTypeID = entityTypeID;
 			itemCount++;
 			ItemPool.addItem(item);
 			
@@ -399,6 +455,7 @@ function Editor(){
 
 	return{
 		addComponent:addComponent,
+		addComponentFromDB:addComponentFromDB,
 		addDuplicateEntity:addDuplicateEntity
 	}
 }

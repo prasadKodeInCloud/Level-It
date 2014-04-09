@@ -31,5 +31,21 @@ Meteor.methods({
 					style: style
 				});
 		return levelID;
+	},
+	saveLevel: function(levelID,jsonString){
+		var level = Levels.findOne({
+					_id: levelID
+		});
+		if(!level){
+			throw new Meteor.Error(401, "No such level exists");
+		}
+		
+		Levels.update(
+		{
+			_id: levelID	
+		},
+		{
+			$set: { jsonString: jsonString }
+		});
 	}
 });

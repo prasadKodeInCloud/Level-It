@@ -1,4 +1,16 @@
-Meteor.subscribe('levels');
+//Levels = new Meteor.Collection('levels');
+//Meteor.subscribe('levels');
+Deps.autorun(function () {
+	Meteor.subscribe('levels',function(){
+		/*
+		console.log(Levels.find().count());
+		curLevel = Levels.findOne({
+				 _id: CURRENT_LEVEL.id
+			       });
+		console.log(curLevel.name);
+		*/
+	});
+});
 Meteor.subscribe('entities');
 Meteor.subscribe('etypes');
 
@@ -7,8 +19,10 @@ function getEntityTypes(){
 	//alert(Meteor.isClient);
 	return Levels.find();
 }
+
+/*
 function initLevel(levelItem){
-	/** level loading goes here **/
+	
 	$('#canvas_content').show('fast');
 	CURRENT_LEVEL = { id: $(levelItem).data('id'), name: $(levelItem).text().trim() };	
 	
@@ -16,7 +30,7 @@ function initLevel(levelItem){
 	parentLi = $('span',parentLi);	
 	CURRENT_PROJECT = { id: $(parentLi).data('id'), name: $(parentLi).text().trim() };
 }
-
+*/
 
 Template.projects.helpers({
 	getAllProjects: function(){
@@ -54,8 +68,7 @@ Template.projects.helpers({
 		});
 		
 		return commonEtypes;
-	}
-	
+	}	
 });
 
 Template.projects.events({
@@ -256,6 +269,7 @@ Template.projects.rendered = function(){
 		  	sortEntities();
 			var divs = [];
 			var box;
+			pool = ItemPool;
 			for(var i=0; i<ItemPool.items.length; i++){
 				box = ItemPool.items[i].box;
 				divs.push({
@@ -265,6 +279,26 @@ Template.projects.rendered = function(){
 					height:Math.floor(box.getHeight()/Global.CELL_HEIGHT)
 				});
 			}
+			
+			return divs;
+		  }
+		  
+		  function saveEntities(){
+		  	sortEntities();
+			var divs = [];
+			
+			//pool = ItemPool;
+			for(var i=0; i<ItemPool.items.length; i++){
+				var box = ItemPool.items[i].box;
+				divs.push({
+					entityTypeID:box.attrs.entityTypeID,
+					rowIndex:Math.floor(box.getAbsolutePosition().x/Global.CELL_WIDTH),
+					columnIndex:Math.floor(box.getAbsolutePosition().y/Global.CELL_HEIGHT),
+					width:Math.floor(box.getWidth()/Global.CELL_WIDTH),
+					height:Math.floor(box.getHeight()/Global.CELL_HEIGHT)
+				});			
+			}	
+			
 			
 			return divs;
 		  }
@@ -287,19 +321,13 @@ Template.projects.rendered = function(){
 		  }
 		  
 		  $("#infoButton").click(function () {
-			divs = getComponentsData();
-			if(divs.length ==0)
-				alert("Drag n drop some elements and try again...");
-			else{
-				console.log(JSON.stringify(divs));
-				alert(JSON.stringify(divs));
-			}
-			
-			
+			divs = saveEntities();
+			Meteor.call('saveLevel',CURRENT_LEVEL.id,JSON.stringify(divs));			
 		  });
 		  
 		  $("#xmlBtn").click(function () {
 			divs = getXml();
+			
 			if(divs.length ==0)
 				alert("Drag n drop some elements and try again...");
 			else{
