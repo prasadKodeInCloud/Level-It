@@ -390,7 +390,8 @@ function Editor(){
 	}
 
 	function addComponent(currentLayer,entityTypeID,params){
-		//console.log(entityTypeID);
+		
+		console.log(entityTypeID);
 		var rowIndex = Math.floor(params.x/Global.CELL_WIDTH);
 		var columnIndex = Math.floor(params.y/Global.CELL_HEIGHT);
 		//console.log("rest x : " + params.x % Global.CELL_WIDTH);
@@ -477,7 +478,7 @@ function Editor(){
 
     function handleDragStart(e) {
 		//this.style.opacity = '0.4';  // this / e.target is the source node.
-		e.dataTransfer.setData("type",e.target.id);
+		e.originalEvent.dataTransfer.setData("type",e.target.id);
 	}
 	  
 	function handleDragOver(e) {

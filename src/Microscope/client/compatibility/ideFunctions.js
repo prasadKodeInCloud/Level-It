@@ -13,7 +13,19 @@ function initLevel(levelItem){
 	parentLi = $('span',parentLi);	
 	CURRENT_PROJECT = { id: $(parentLi).data('id'), name: $(parentLi).text().trim() };
 	
+	getEntityTypes();
 	getEntities();
+}
+
+function getEntityTypes(){
+	var etypes = ETypes.find({
+		     	projectID: CURRENT_PROJECT.id
+		     });
+	$("#entityTypes #uniq").empty();
+	etypes.forEach(function(e){
+		entityTypes[e._id] = e;
+		$("#entityTypes #uniq").append('<div class="component" id= "'+ e._id +'" draggable="true" >' + e.name + '</div>');
+	});
 }
 
 function getEntities(){

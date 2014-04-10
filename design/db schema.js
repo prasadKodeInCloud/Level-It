@@ -1,7 +1,11 @@
 
 //Entity Types
 //========
-{ _id:"RECTANGLE", isResizable:false, imageUrl:"../url", styles:{fill:'#E9F1FA', stroke:'#DBE2F0',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:1}}
+{ _id:"RECTANGLE", type:"RECTANGLE", name:"rectangle",projectID:<pid>, isResizable:false, imageUrl:"../url", styles:{fill:'#E9F1FA', stroke:'#DBE2F0',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:1}}
+
+{ _id:"BIRD", type:"RECTANGLE", name:"bird",projectID:"xfwPoKS6TcxsKHBS2", isResizable:false, imageUrl:"../url", styles:{fill:'#E9F1FA', stroke:'#DBE2F0',strokeWidth: 2,opacity: 1,isDraggable:true,isLocked:true,xCells:2, yCells:1}}
+
+
 { _id:"RESIZABLE_RECTANGLE", isResizable:true }
 { _id:"CIRCLE", isResizable:false }
 { _id:"RESIZABLE_CIRCLE", isResizable:true }

@@ -122,10 +122,18 @@
 		
 		<h5>Entities</h5>
 		
-		{{#each getCommonEntityTypes}}
-			<div class="component" id = "{{_id}}" draggable="true" >{{name}}</div>
-		{{/each}}
+		<div id="entityTypes">
 		
+			<div id="common">
+				{{#each getCommonEntityTypes}}
+					<div class="component" id = "{{_id}}" draggable="true" >{{name}}</div>
+				{{/each}}
+			</div>
+			<div id="uniq">
+			</div>
+		</div>
+		
+				
 		<div align="center">
 			<a href="#" class="btn btn-success disabled">New</a>
 		</div>
