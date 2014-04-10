@@ -49,6 +49,16 @@ Template.projects.helpers({
 					userID: user._id
 			 	}).fetch();
 		//es = userProjects;
+		
+		userProjects.forEach(function(p,i){
+		 //sort the levels by level name
+		      var levels = Levels.find(
+			{projectID:p._id}, 
+			{sort:{name:1}}
+		      ).fetch();	       
+
+			returnObj[i] = {name:p.name, _id:p._id, levels:levels};
+		});
 			 	
 		userProjects.forEach(function(p,i){
 			var levels = Levels.find({
