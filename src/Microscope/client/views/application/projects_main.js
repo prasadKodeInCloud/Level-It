@@ -1,16 +1,19 @@
-//Levels = new Meteor.Collection('levels');
-//Meteor.subscribe('levels');
-Deps.autorun(function () {
-	Meteor.subscribe('levels',function(){
-		/*
-		console.log(Levels.find().count());
-		curLevel = Levels.findOne({
-				 _id: CURRENT_LEVEL.id
-			       });
-		console.log(curLevel.name);
-		*/
-	});
+Levels = new Meteor.Collection('levels');
+
+Deps.autorun(function(){
+		Meteor.subscribe('levels',function(){
+			Levels.find().observe({
+				added: function(item){
+						//console.log(item.name);
+						//alert(item.name);
+					},
+				changed: function(nitem,oitem){
+						getEntities();
+					}
+			});
+		});
 });
+
 Meteor.subscribe('entities');
 Meteor.subscribe('etypes');
 
@@ -321,7 +324,8 @@ Template.projects.rendered = function(){
 		  }
 		  
 		  $("#infoButton").click(function () {
-			divs = saveEntities();
+			divs = saveEntities();			
+			//console.log(CURRENT_LEVEL.id,CURRENT_LEVEL.name);
 			Meteor.call('saveLevel',CURRENT_LEVEL.id,JSON.stringify(divs));			
 		  });
 		  

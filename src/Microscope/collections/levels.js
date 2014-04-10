@@ -47,5 +47,6 @@ Meteor.methods({
 		{
 			$set: { jsonString: jsonString }
 		});
+		
 	}
 });

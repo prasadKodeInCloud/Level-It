@@ -1,3 +1,5 @@
+var itemMap = {};
+
 function initLevel(levelItem){
 	/** level loading goes here **/
 	$('#canvas_content').show('fast');
@@ -15,20 +17,22 @@ function initLevel(levelItem){
 }
 
 function getEntities(){
-	//console.log(CURRENT_LEVEL.id);
+	//console.log(CURRENT_LEVEL.id,CURRENT_LEVEL.name);
 	var level = Levels.findOne({ 
 			_id: CURRENT_LEVEL.id
 		    });
-	console.log(level);
-	
-	var divs = JSON.parse(level.jsonString);
-	for(var i=0;i<divs.length;i++){
-		var entity = divs[i];
-		editor.addComponentFromDB(layer,entity.entityTypeID,{
-			x:entity.rowIndex,
-			y:entity.columnIndex,
-			width:entity.width,
-			height:entity.height
-		});
+	if(level){
+		//console.log(level);
+		ItemPool.clearItems();
+		var divs = JSON.parse(level.jsonString);
+		for(var i=0;i<divs.length;i++){
+			var entity = divs[i];			
+			editor.addComponentFromDB(layer,entity.entityTypeID,{
+				x:entity.rowIndex,
+				y:entity.columnIndex,
+				width:entity.width,
+				height:entity.height
+			});
+		}
 	}	
 }

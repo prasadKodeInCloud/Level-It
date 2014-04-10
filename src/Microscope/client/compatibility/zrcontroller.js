@@ -62,6 +62,7 @@ ItemPool.addItem = function(item){
 }
 
 ItemPool.selectItem = function(item){
+	
 	//for(var i=0; i<ItemPool.items.length; i++){
 	//	ItemPool.items[i].hidePointers();
 	//}
@@ -94,6 +95,13 @@ ItemPool.removeCurrentItem = function(){
 	//console.log("Remove Item Pos: " + pos)
 	if(pos != -1)
 	ItemPool.items.splice(pos,1);
+}
+ItemPool.clearItems = function(){
+	ItemPool.items.forEach(function(e){
+		e.kn.remove();
+	});
+	ItemPool.items = [];
+	layer.draw();
 }
 /*
 $(document).ready(function () {
