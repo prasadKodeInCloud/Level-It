@@ -17,7 +17,7 @@ Deps.autorun(function(){
 				added: function(item){
 						if(CURRENT_PROJECT){
 							if(item.projectID && item.projectID == CURRENT_PROJECT.id){
-								console.log(item.name);
+								console.log(item._id,entityTypes.hasOwnProperty(item._id));					
 							}
 						}
 					},
@@ -35,11 +35,6 @@ Deps.autorun(function(){
 Meteor.subscribe('entities');
 Meteor.subscribe('etypes');
 
-
-function getEntityTypes(){
-	//alert(Meteor.isClient);
-	return Levels.find();
-}
 
 
 Template.projects.helpers({
@@ -388,6 +383,10 @@ Template.projects.rendered = function(){
 		  	$("#btn_downloadXml").attr('href','data:Application/octet-stream,' + encodeURIComponent(getXml()));
 		  });
 		  
+		  $("#btn_newEntity").click(function(){
+		  	$('#modal_addEntity').modal('show'); 	
+		  });
+		  
 		  $('#stage').contextMenu('myMenu1', {
 
 			  bindings: {
@@ -460,6 +459,38 @@ Template.projects.rendered = function(){
   		$('input[type="text"]',e.target).val('');
   		var target_span = Session.get('target_span');
   		$(target_span).click();
+	});
+	
+	$("#frm_addEntity").submit(function(e){
+		$('#modal_addEntity').modal('hide'); 	
+		
+		e.preventDefault();
+		
+		var name = $(e.target).find('[name=et_name]').val();
+		var type = 'RECTANGLE'; 
+  		var imgURL = $(e.target).find('[name=et_img]').val();
+  		
+  		
+  		var style = {
+  				fill:'#E9F1FA',
+  				stroke:'#DBE2F0',
+  				strokeWidth:2,
+  				isDraggable: true,
+  				isLocked: true,
+  				xCells : $(e.target).find('[name=et_width]').val(),
+  				yCells : $(e.target).find('[name=et_height]').val()  							
+  			    };
+  		var params = {
+  				imageUrl:imgURL,
+  				isResizable:$(e.target).find('[name=et_resizable]').is(':checked'),
+  				styles:style
+  			     };
+  			    
+  		Meteor.call('addNewEntityType',name,type,CURRENT_PROJECT.id,params);  		
+  		$('input[type="text"]',e.target).val('');
+  		
+  		console.log(getEntityTypes());
+  		getEntityTypes();
 	});
 	 
 	 /** end of code **/

@@ -42,9 +42,66 @@
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 <!-- modal for new level goes here -->
+<div class="modal hide fade" id="modal_addEntity">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 class="modal-title">Add Entity Type</h4>
+	      </div>
+	      <div class="modal-body">
+			<form class="main" id="frm_addEntity">
+
+			    <div class="control-group">
+				<label class="control-label" for="et_name">Entity Type Name</label>
+				<div class="controls">
+				    <input name="et_name" type="text" value="" placeholder="Name your level"/>
+				</div>
+			    </div>
+
+			    <div class="control-group">
+				<label>
+					    <input name="et_resizable" type="checkbox" checked="checked" /> Is Resizable ?
+				
+				</label>
+			    </div> 
+			    
+			    <div class="control-group">
+				<label class="control-label" for="et_width">Image URL</label>
+				<div class="controls">
+				     <input name="et_img" type="text" value="" />
+				</div>
+			    </div>
+			    
+			    
+			    <div class="form-group">
+				<label class="control-label" for="et_width">Width</label>
+				<div class="controls">
+				    <input name="et_width" type="number" value="2" />
+				</div>
+			    </div> 
+			    <div class="control-group">
+				<label class="control-label" for="et_height">Height</label>
+				<div class="controls">
+				    <input name="et_height" type="number" value="1" />
+				</div>
+			    </div>
+			    
+			    <div class="control-group">
+				<div class="controls">
+				    <input type="submit" value="Submit" class="btn btn-primary"/>
+				</div>
+			    </div>
+			</form>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
 
 <!-- modal for adding new level started here -->
- <div class="modal hide fade" id="modal_addEntity">
+ <div class="modal hide fade" id="modal_addEntitys">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -52,7 +109,7 @@
 		<h4 class="modal-title">Add Entity</h4>
 	      </div>
 	      <div class="modal-body">
-			<form class="main" id="frm_addLevel">
+			<form class="main" id="frm">
 
 			    <div class="control-group">
 				<label class="control-label" for="title">Entity Title</label>
@@ -135,7 +192,7 @@
 		
 				
 		<div align="center">
-			<a href="#" class="btn btn-success disabled">New</a>
+			<a href="#" class="btn btn-success" id="btn_newEntity" style="display:none">New</a>
 		</div>
 		
 		<h5>Guide</h5>

@@ -7,16 +7,17 @@ ETypes.allow({
 });
 
 Meteor.methods({
-	addNewEntityType: function(entityTypeID,entityName,entityType,projectID,params){
+	addNewEntityType: function(entityName,entityType,projectID,params){
+		/*
 		var etypeExists = ETypes.findOne({
 				  	_id: entityTypeID
 				  });
 		if(etypeExists){
 			throw new Meteor.Error(401, "That ID already exists");
 		}
+		*/
 		
 		return ETypes.insert({
-			_id: entityTypeID,
 			name: entityName,
 			type: entityType,
 			projectID:projectID,

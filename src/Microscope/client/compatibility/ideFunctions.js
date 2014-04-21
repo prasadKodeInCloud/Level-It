@@ -15,6 +15,8 @@ function initLevel(levelItem){
 	
 	getEntityTypes();
 	getEntities();
+	
+	$('#btn_newEntity').show();
 }
 
 function getEntityTypes(){
@@ -23,8 +25,10 @@ function getEntityTypes(){
 		     });
 	$("#entityTypes #uniq").empty();
 	etypes.forEach(function(e){
-		entityTypes[e._id] = e;
-		$("#entityTypes #uniq").append('<div class="component" id= "'+ e._id +'" draggable="true" >' + e.name + '</div>');
+		//if (!$.contains('#entityTypes #uniq', '#' + e._id)) {		
+			entityTypes[e._id] = e;
+			$("#entityTypes #uniq").append('<div class="component" id= "'+ e._id +'" draggable="true" >' + e.name + '</div>');
+		//}
 	});
 }
 
